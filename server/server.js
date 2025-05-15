@@ -32,7 +32,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://watchlelo.vercel.app/",
+  "https://watchlelo.vercel.app",
 ];
 app.use(
   cors({
