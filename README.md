@@ -9,19 +9,19 @@ __Express.js__ for creating REST API, __MongoDB__ for database. It supports auth
 
 ### Home Screen
 
-![Screenshot (62)](https://github.com/Piyush-Kr-Sharma/MERN-E-Commerce-App/blob/main/assets/Home%20Page.png)
+![Screenshot (62)](https://github.com/Piyush-Kr-Sharma/WatchLelo/blob/main/assets/Home%20Page.png)
 
 ### User Dashboard
 
-![Screenshot (51)](https://github.com/Piyush-Kr-Sharma/MERN-E-Commerce-App/blob/main/assets/User%20Dashboard.png)
+![Screenshot (51)](https://github.com/Piyush-Kr-Sharma/WatchLelo/blob/main/assets/User%20Dashboard.png)
 
 ### Admin Panel
 
-![Screenshot (52)](https://github.com/Piyush-Kr-Sharma/MERN-E-Commerce-App/blob/main/assets/Admin%20Orders%20Page.png)
+![Screenshot (52)](https://github.com/Piyush-Kr-Sharma/WatchLelo/blob/main/assets/Admin%20Orders%20Page.png)
 
 ### Cart Page
 
-![Screenshot (53)](https://github.com/Piyush-Kr-Sharma/MERN-E-Commerce-App/blob/main/assets/Cart%20Page.png)
+![Screenshot (53)](https://github.com/Piyush-Kr-Sharma/WatchLelo/blob/main/assets/Cart%20Page.png)
 
 ## Features
 
