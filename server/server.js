@@ -61,10 +61,13 @@ app.get("/", (req, res) => {
 // PORT  --> we can't expose the port in production so we will add it in .env file, we add all the confidential things in .env file like payment gateway link, mongo db link, etc
 const PORT = process.env.PORT || 8080; // env me se process karke PORT ka value nikalo
 
-app.get("/", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "client", "build")));
-  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
+if (process.env.DEV_MODE !== "development") {
+  app.use(express.static(path.join(__dirname, "client", "build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 // run listen
 app.listen(PORT, () => {
