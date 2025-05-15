@@ -29,6 +29,7 @@ connectDB();
 const app = express();
 
 // middlewares
+
 app.use(cors());
 app.use(express.json()); // This middleware function parses incoming requests with JSON payloads. It parses the incoming request body, if the Content-Type header matches the type application/json, and exposes the resulting object on req.body
 app.use(morgan("dev")); // This middleware function is a logger. It logs HTTP requests, including information like request method, URL, status code, response time, and more. The 'dev' option in this case configures it to log in a pre-defined format that's particularly helpful during development, providing concise but informative output.
