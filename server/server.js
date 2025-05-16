@@ -32,37 +32,17 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000",
-<<<<<<< HEAD
-  "https://watchlelo.vercel.app"
-];
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true
-}));
-=======
   "https://watchlelo.vercel.app",
 ];
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: allowedOrigins,
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"], // ✅ THIS LINE IS ESSENTIAL
   })
 );
->>>>>>> 6f89e96 (Some changes)
+
 app.use(express.json()); // This middleware function parses incoming requests with JSON payloads. It parses the incoming request body, if the Content-Type header matches the type application/json, and exposes the resulting object on req.body
 app.use(morgan("dev")); // This middleware function is a logger. It logs HTTP requests, including information like request method, URL, status code, response time, and more. The 'dev' option in this case configures it to log in a pre-defined format that's particularly helpful during development, providing concise but informative output.
 app.use(express.static(path.resolve(__dirname, "path")));
@@ -80,10 +60,6 @@ app.get("/", (req, res) => {
 // PORT  --> we can't expose the port in production so we will add it in .env file, we add all the confidential things in .env file like payment gateway link, mongo db link, etc
 const PORT = process.env.PORT || 8080; // env me se process karke PORT ka value nikalo
 
-<<<<<<< HEAD
-=======
-// Serve static files in production
->>>>>>> 6f89e96 (Some changes)
 if (process.env.DEV_MODE !== "development") {
   app.use(express.static(path.join(__dirname, "client", "build")));
 
