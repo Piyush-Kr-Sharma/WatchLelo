@@ -26,7 +26,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
-            <FaShoppingCart /> E-Commerce App
+            <FaShoppingCart /> WatchLelo
           </Link>
           <button
             className="navbar-toggler"

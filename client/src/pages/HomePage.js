@@ -125,12 +125,12 @@ const HomePage = () => {
   return (
     <Layout title={"All Products - Best offers "}>
       {/* banner image */}
-      <img
+      {/* <img
         src="/images/banner (1).png"
         className="banner-img"
         alt="bannerimage"
         width={"100%"}
-      />
+      /> */}
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
